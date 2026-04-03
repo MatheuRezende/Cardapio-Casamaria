@@ -12,6 +12,13 @@ img{
 
 }
 
+#img-prato {
+   
+    border-radius: 100%;
+    margin-top: 10px;
+    border: solid 10px rgb(245, 168, 97);
+}
+
 
 #dia-semana {
     text-align: center;
