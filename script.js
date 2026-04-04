@@ -73,3 +73,4 @@ const diasSemana = [
 // mostra o dia abaixo da semana
 document.getElementById("dia-semana").innerText = diasSemana[diaSemana];
 document.getElementById("preco-prato").innerText = "R$ 27,00";
+

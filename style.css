@@ -26,8 +26,19 @@ img{
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+#navbarNavDropdown{
+    
+    text-align: center;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+  
+    border-radius: 50px;
 
 
+
+}
+  
 #prato-do-dia {
     text-align: center;
     padding: 20px;
@@ -69,7 +80,7 @@ h1{
 }
 
 
-.menu-mobile {
+/* .menu-mobile {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -88,8 +99,7 @@ h1{
   background-color: rgb(245, 168, 97);
  
   
-}
-
+} */
 
 
 .title  {
@@ -98,7 +108,7 @@ h1{
     color:black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
     font-weight: bold;
-   border: solid 5px white;(0, 0, 0);
+   
    border-radius: 20px;
    padding: 10px;
    width: :auto;
@@ -106,14 +116,16 @@ h1{
    margin-right: auto;
 }
 
-
+body{
+    background-color: rgb(235, 198, 164);
+}
 
 .subtitle{
     text-align: center;
     color:white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
     font-weight: bold;
-   border: solid 5px white;(0, 0, 0);
+
    border-radius: 20px;
    padding: 10px;
    width: :autofill;
@@ -162,3 +174,5 @@ footer{
     font-weight: bold;
 font-size: 30px;
 }
+
+
