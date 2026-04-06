@@ -46,9 +46,13 @@ const hoje = new Date();
 const diaSemana = hoje.getDay(); // 0 a 6
 const diaMes = hoje.getDate();
 
-// CALCULA SEMANA (1 a 4)
-let semana = Math.ceil(diaMes / 7);
-if (semana > 4) semana = 4; // garante até semana 4
+// PRIMEIRO DIA DO MÊS
+const primeiroDia = new Date(hoje.getFullYear(), hoje.getMonth(), 1).getDay();
+
+// CÁLCULO CORRETO DA SEMANA
+let semana = Math.ceil((diaMes + primeiroDia) / 7);
+
+if (semana > 4) semana = 4;
 
 // PEGA PRATO
 const prato = cardapio[semana][diaSemana];
@@ -57,7 +61,7 @@ const prato = cardapio[semana][diaSemana];
 const nomeSemana = ["", "Primeira Semana", "Segunda Semana", "Terceira Semana", "Quarta Semana"];
 
 document.getElementById("nome-prato").innerText = nomeSemana[semana];
-document.getElementById("img-prato").src = prato.img;
+document.getElementById("img-prato").src = prato.img || "img/padrao.jpg";
 document.getElementById("desc-prato").innerText = prato.nome;
 
 const diasSemana = [
@@ -70,7 +74,6 @@ const diasSemana = [
     "Sábado"
 ];
 
-// mostra o dia abaixo da semana
 document.getElementById("dia-semana").innerText = diasSemana[diaSemana];
 document.getElementById("preco-prato").innerText = "R$ 27,00";
 
