@@ -1,7 +1,7 @@
 
     const cardapio = {
     1: [
-        { nome: "Fechado", img: "img/fechado.jpg" },
+        { nome: "Fechado", img: "img/fechado.jpeg" },
         { nome: "Isca de carne com mandioca, molho de chuchu, jiló, arroz, feijão e salada repolho.", img: "" },
         { nome: "Filé de frango acebolado, purê de batata, beterraba, arroz, feijão e salada.", img: "img/filadefrango.jpeg" },
         { nome: "Bisteca assada, molho de mandioca, couve, arroz, feijão e salada de alface.", img: "img/bisteca.jpeg" },
@@ -11,7 +11,7 @@
     ],
 
     2: [
-        { nome: "Fechado", img: "img/fechado.jpg" },
+        { nome: "Fechado", img: "img/fechado.jpeg" },
         { nome: "Segunda - Carne de panela, purê de abóbora, couve, arroz, feijão e salada de repolho.", img: "img/carnedepanela.jpeg" },
         { nome: "Filé de frango com batatas, cenoura no azeite, feijão temperado com calabresa, arroz, feijão normal e salada de alface.", img: "img/frangocombatata.jpeg" },
         { nome: "Almôndegas com espaguete, feijoada vegetariana, feijão normal, arroz e salada de repolho.", img: "img/macarraocomalmodegas.jpeg" },
@@ -21,7 +21,7 @@
     ],
 
     3: [
-        { nome: "Fechado", img: "img/fechado.jpg" },
+        { nome: "Fechado", img: "img/fechado.jpeg" },
         { nome: "Carne moída com legumes, quiabo, polenta, bolinho de arroz, feijão, arroz e salada de repolho.", img: "." },
         { nome: "Galinhada, molho de pequi, banana frita, farofa, feijão e salada de alface.", img: "" },
         { nome: "Bife de carne acebolado, batata frita, legumes, feijão, arroz e salada.", img: "" },
@@ -31,7 +31,7 @@
     ],
 
     4: [
-        { nome: "Fechado", img: "img/fechado.jpg" },
+        { nome: "Fechado", img: "img/fechado.jpeg" },
         { nome: "Costelinha assada com ervas, couve, tutu de feijão, arroz, feijão normal e salada repolho.", img: "" },
         { nome: "Frango assado temperado com maionese, legumes, farofa simples, feijão e salada.", img: "" },
         { nome: "Hambúrguer caseiro, batata frita, legumes, feijão, arroz e salada de repolho.", img: "" },
