@@ -43,37 +43,27 @@
 
 // DATA ATUAL
 const hoje = new Date();
-const diaSemana = hoje.getDay(); // 0 a 6
+const diaSemana = hoje.getDay(); // 0 (Domingo) a 6 (Sábado)
 const diaMes = hoje.getDate();
 
 // PRIMEIRO DIA DO MÊS
-const primeiroDia = new Date(hoje.getFullYear(), hoje.getMonth(), 1).getDay();
+const primeiroDia = new Date(hoje.getFullYear(), hoje.getMonth(), 1);
+let primeiroDiaSemana = primeiroDia.getDay();
 
-// CÁLCULO CORRETO DA SEMANA
-let semana = Math.ceil((diaMes + primeiroDia) / 7);
+// Ajusta para considerar segunda como início (0 = segunda, 6 = domingo)
+primeiroDiaSemana = (primeiroDiaSemana === 0) ? 6 : primeiroDiaSemana - 1;
 
+// CALCULA O PRIMEIRO DIA COMPLETO (primeira segunda-feira do mês)
+const primeiroDiaCompleto = 1 + (7 - primeiroDiaSemana);
+
+// CÁLCULO DA SEMANA (AGORA CORRETO)
+let semana;
+
+if (diaMes < primeiroDiaCompleto) {
+    semana = 1; // ainda está na "semana quebrada", mantém como 1
+} else {
+    semana = Math.floor((diaMes - primeiroDiaCompleto) / 7) + 2;
+}
+
+// Limita até 4 semanas
 if (semana > 4) semana = 4;
-
-// PEGA PRATO
-const prato = cardapio[semana][diaSemana];
-
-// MOSTRA NA TELA
-const nomeSemana = ["", "Primeira Semana", "Segunda Semana", "Terceira Semana", "Quarta Semana"];
-
-document.getElementById("nome-prato").innerText = nomeSemana[semana];
-document.getElementById("img-prato").src = prato.img || "img/padrao.jpg";
-document.getElementById("desc-prato").innerText = prato.nome;
-
-const diasSemana = [
-    "Domingo",
-    "Segunda-feira",
-    "Terça-feira",
-    "Quarta-feira",
-    "Quinta-feira",
-    "Sexta-feira",
-    "Sábado"
-];
-
-document.getElementById("dia-semana").innerText = diasSemana[diaSemana];
-document.getElementById("preco-prato").innerText = "R$ 27,00";
-
