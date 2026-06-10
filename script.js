@@ -52,10 +52,8 @@ const primeiroDia = new Date(hoje.getFullYear(), hoje.getMonth(), 1).getDay();
 // CÁLCULO CORRETO DA SEMANA
 let semana = Math.ceil((diaMes + primeiroDia) / 7);
 
-// 🔥 se o mês NÃO começou no domingo, corrige a semana
-if (primeiroDia !== 0) {
-    semana -= 1;
-}
+
+//goll
 
 // limites
 if (semana < 1) semana = 1;
