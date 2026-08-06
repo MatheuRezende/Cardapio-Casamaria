@@ -49,13 +49,27 @@ const diaMes = hoje.getDate();
 // PRIMEIRO DIA DO MÊS
 const primeiroDia = new Date(hoje.getFullYear(), hoje.getMonth(), 1).getDay();
 
-// CÁLCULO CORRETO DA SEMANA
-let semana = Math.ceil((diaMes + primeiroDia) / 7);
+// Descobre a primeira segunda-feira do mês
+let primeiraSegunda;
 
+if (primeiroDia === 1) {
+    primeiraSegunda = 1;
+} else if (primeiroDia === 0) {
+    primeiraSegunda = 2;
+} else {
+    primeiraSegunda = 9 - primeiroDia;
+}
 
-//goll
+// Calcula a semana
+let semana;
 
-// limites
+if (diaMes < primeiraSegunda) {
+    semana = 1;
+} else {
+    semana = Math.floor((diaMes - primeiraSegunda) / 7) + 1;
+}
+
+// Limites
 if (semana < 1) semana = 1;
 if (semana > 4) semana = 4;
 
