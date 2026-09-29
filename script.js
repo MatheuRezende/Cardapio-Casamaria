@@ -42,46 +42,50 @@
 };
 
 // DATA ATUAL
+
 const hoje = new Date();
-const diaSemana = hoje.getDay(); // 0 a 6
+
+const diaSemana = hoje.getDay(); // 0 = Domingo, 1 = Segunda...
 const diaMes = hoje.getDate();
 
-// PRIMEIRO DIA DO MÊS
-const primeiroDia = new Date(hoje.getFullYear(), hoje.getMonth(), 1).getDay();
 
-// Descobre a primeira segunda-feira do mês
-let primeiraSegunda;
+// CALCULA A SEMANA DO CARDÁPIO
+// O mês é dividido em blocos de 7 dias.
+// Depois da 4ª semana, volta para a 1ª.
 
-if (primeiroDia === 1) {
-    primeiraSegunda = 1;
-} else if (primeiroDia === 0) {
-    primeiraSegunda = 2;
-} else {
-    primeiraSegunda = 9 - primeiroDia;
-}
+let semana = Math.floor((diaMes - 1) / 7) + 1;
 
-// Calcula a semana
-let semana;
-
-if (diaMes < primeiraSegunda) {
+// Depois da 4ª semana, volta para a 1ª
+if (semana > 4) {
     semana = 1;
-} else {
-    semana = Math.floor((diaMes - primeiraSegunda) / 7) + 1;
 }
 
-// Limites
-if (semana < 1) semana = 1;
-if (semana > 4) semana = 4;
 
 // PEGA PRATO
+
 const prato = cardapio[semana][diaSemana];
 
+
 // MOSTRA NA TELA
-const nomeSemana = ["", "Primeira Semana", "Segunda Semana", "Terceira Semana", "Quarta Semana"];
+
+const nomeSemana = [
+    "",
+    "Primeira Semana",
+    "Segunda Semana",
+    "Terceira Semana",
+    "Quarta Semana"
+];
 
 document.getElementById("nome-prato").innerText = nomeSemana[semana];
-document.getElementById("img-prato").src = prato.img || "img/padrao.jpg";
-document.getElementById("desc-prato").innerText = prato.nome;
+
+document.getElementById("img-prato").src =
+    prato.img || "img/padrao.jpg";
+
+document.getElementById("desc-prato").innerText =
+    prato.nome;
+
+
+// DIAS DA SEMANA
 
 const diasSemana = [
     "Domingo",
@@ -93,6 +97,11 @@ const diasSemana = [
     "Sábado"
 ];
 
-document.getElementById("dia-semana").innerText = diasSemana[diaSemana];
-document.getElementById("preco-prato").innerText = "R$ 27,00";
+document.getElementById("dia-semana").innerText =
+    diasSemana[diaSemana];
 
+
+// PREÇO
+
+document.getElementById("preco-prato").innerText =
+    "R$ 27,00";
