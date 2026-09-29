@@ -4,7 +4,7 @@
         { nome: "Fechado", img: "img/fechado.jpeg" },
         { nome: "Isca de carne com mandioca, molho de chuchu, jiló, arroz, feijão e salada repolho.", img: "" },
         { nome: "Filé de frango acebolado, purê de batata, beterraba, arroz, feijão e salada.", img: "img/filedefrango.jpeg" },
-        { nome: "Bisteca assada, molho de mandioca, couve, arroz, feijão e salada de alface.", img: "img/bisteca.jpeg" },
+        { nome: "Costelinha na panela de pressão, couve, legumes, arroz, feijão e salada de alface.", img: "" },
         { nome: "Frango assado no shoyu, farofa de banana, legumes, arroz, feijão e salada.", img: "img/Frangoassado.jpeg" },
         { nome: "Feijoada, couve, farofa, laranja, banana frita, arroz e salada de repolho", img: "img/fejoada.jpeg" },
         { nome: "Churrasco, Arroz, feijão tropeiro ou normal, maionese falsa, mandioca e vinagrete", img: "img/churrasco.jpeg" }
@@ -33,7 +33,7 @@
     4: [
         { nome: "Fechado", img: "img/fechado.jpeg" },
         { nome: "Costelinha assada com ervas, couve, tutu de feijão, arroz, feijão normal e salada repolho.", img: "" },
-        { nome: "Frango assado temperado com maionese, legumes, farofa simples, feijão e salada.", img: "" },
+        { nome: "Filé de frango com molho, purê de batata, abobrinha no azeite, arroz, feijão e salada de alface.", img: "" },
         { nome: "Hambúrguer caseiro, batata frita, legumes, feijão, arroz e salada de repolho.", img: "" },
         { nome: "Frango assado com ervas, mandioca e parmesão, purê de abóbora, arroz, feijão e salada.", img: "" },
         { nome: "Feijoada, couve, farofa, laranja, banana frita, arroz e salada de repolho", img: "img/fejoada.jpeg" },
