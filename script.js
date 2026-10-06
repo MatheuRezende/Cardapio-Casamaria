@@ -42,18 +42,34 @@
 };
 
 // DATA ATUAL
-
 const hoje = new Date();
 
 const diaSemana = hoje.getDay(); // 0 = Domingo, 1 = Segunda...
 const diaMes = hoje.getDate();
 
 
+// ==========================================
 // CALCULA A SEMANA DO CARDÁPIO
-// O mês é dividido em blocos de 7 dias.
-// Depois da 4ª semana, volta para a 1ª.
+// ==========================================
 
-let semana = Math.floor((diaMes - 1) / 7) + 1;
+// Descobre em qual dia da semana caiu o dia 1
+const primeiroDiaMes = new Date(
+    hoje.getFullYear(),
+    hoje.getMonth(),
+    1
+);
+
+const diaSemanaPrimeiroDia = primeiroDiaMes.getDay();
+
+// Descobre quantos dias se passaram desde o domingo
+// da semana que contém o dia 1
+const domingoInicial = 1 - diaSemanaPrimeiroDia;
+
+// Calcula a semana
+let semana = Math.floor(
+    (diaMes - domingoInicial) / 7
+) + 1;
+
 
 // Depois da 4ª semana, volta para a 1ª
 if (semana > 4) {
@@ -61,12 +77,16 @@ if (semana > 4) {
 }
 
 
-// PEGA PRATO
+// ==========================================
+// PEGA O PRATO
+// ==========================================
 
 const prato = cardapio[semana][diaSemana];
 
 
+// ==========================================
 // MOSTRA NA TELA
+// ==========================================
 
 const nomeSemana = [
     "",
@@ -76,7 +96,8 @@ const nomeSemana = [
     "Quarta Semana"
 ];
 
-document.getElementById("nome-prato").innerText = nomeSemana[semana];
+document.getElementById("nome-prato").innerText =
+    nomeSemana[semana];
 
 document.getElementById("img-prato").src =
     prato.img || "img/padrao.jpg";
@@ -85,7 +106,9 @@ document.getElementById("desc-prato").innerText =
     prato.nome;
 
 
+// ==========================================
 // DIAS DA SEMANA
+// ==========================================
 
 const diasSemana = [
     "Domingo",
@@ -101,7 +124,9 @@ document.getElementById("dia-semana").innerText =
     diasSemana[diaSemana];
 
 
+// ==========================================
 // PREÇO
+// ==========================================
 
 document.getElementById("preco-prato").innerText =
     "R$ 27,00";
